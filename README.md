@@ -2,16 +2,6 @@
 
 このZIPは、このアプリだけを1つのGitHubリポジトリで公開するためのファイルです。相手のサイトを一緒にアップロードする必要はありません。
 
-## GitHub Pagesで公開
-
-1. ZIPを解凍します。
-2. フォルダーの中身を、公開用リポジトリの一番上へアップロードします。`index.html` が直下にあるようにしてください。
-3. Settings → Pages → Source: **Deploy from a branch** を選びます。
-4. Branch: **main**、Folder: **/(root)** を選び、Saveを押します。
-5. 公開完了後、Pages設定画面に表示されたURLそのものを開きます。**Enforce HTTPS** を有効にしてください。
-
-ビルド・APIキー・GitHub Actions用ワークフローの追加は不要です。2つのアプリを公開する場合は、リポジトリを2つ作り、それぞれのZIPの中身を別々にアップロードします。
-
 ## 使い方
 
 1. `index.html` を開くと、既定の平屋の固定間取りで開始します。
@@ -32,3 +22,4 @@ ZIPの中から直接起動せず、すべて解凍してから `index.html` を
 
 GitHub公式手順：
 https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
