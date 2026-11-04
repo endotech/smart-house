@@ -1,0 +1,79 @@
+.classroom [hidden]{display:none!important}
+.classroom #sample,.classroom #newDesign,.classroom #open,.classroom #save,.classroom #methodSelect,.classroom #methodHint,.classroom .method-switch,.classroom .mini-note,.classroom .material,.classroom .finish-controls,.classroom .level-picker,.classroom .cutaway-control,.classroom #evaluate,.classroom .live-comparison,.classroom #inventory,.classroom #insulationSelect,.classroom #damperSelect,.classroom .guide>.section:not(#rotationBox),.classroom [aria-label="屋根の形状"]{display:none!important}
+.classroom #classroomStatus{padding-bottom:12px}
+.classroom .device-row{display:flex;flex-wrap:wrap;align-items:center;gap:5px;padding:8px 0;border-bottom:1px solid #dce4d9}
+.classroom .device-row strong{width:100%}
+
+.classroom.classroom-imported .level-picker{display:flex!important}
+
+.classroom-clock{display:grid;grid-template-columns:minmax(360px,1.65fr) minmax(190px,1fr) minmax(125px,.7fr) minmax(170px,.85fr);gap:0;padding:10px 16px;background:#edf1e7;border-bottom:1px solid #d5dfd2;flex-shrink:0}
+.classroom-clock label{display:flex;align-items:center;gap:6px}
+.classroom-clock output{font-variant-numeric:tabular-nums;min-width:3.3em;font-weight:bold}
+.classroom #stage::after{content:'';position:absolute;inset:0;background:#142945;opacity:var(--night-opacity,0);pointer-events:none;z-index:1}
+.classroom .stage-caption,.classroom .stage-bottom,.classroom .camera,.classroom #connection{z-index:2}
+
+.classroom .guide> :not(#classroomStatus):not(#operationLog):not(#rotationBox):not(section:has(#microbitConnect)){display:none}
+.classroom .guide{display:flex;flex-direction:column;gap:8px;padding:10px;min-height:0}
+.classroom .guide h2{margin:0 0 4px;font-size:1rem}
+.classroom #classroomStatus{display:flex;flex-direction:column;min-height:0;padding:0;flex:1}
+.classroom #classroomStatus>p{display:none}
+.classroom #classroomRows{overflow:auto;min-height:0}
+.classroom .device-row{padding:4px 0;gap:4px}
+.classroom .device-row strong{width:auto;flex:1;font-size:.82rem}
+.classroom .device-row button{padding:3px 6px;font-size:.75rem}
+.classroom [data-running="true"]{background:#d4efdd;color:#174d30;border-color:#8ec19f}
+.classroom [data-running="false"]{background:#eceff2;color:#485463;border-color:#c6ced6}
+.classroom #operationLog ol{margin:0;padding:5px 5px 5px 24px;height:clamp(42px,8vh,72px);overflow:auto;background:#f1f4ef;font-size:.77rem}
+.classroom #microbitStatus{margin:4px 0;font-size:.8rem}
+@media(min-width:801px){
+ .classroom{display:flex;flex-direction:column;height:100dvh;overflow:hidden}
+ .classroom .layout{height:auto;flex:1;min-height:0;display:grid;grid-template-columns:minmax(150px,200px) minmax(260px,1fr) minmax(245px,310px)}
+ .classroom .layout>main{height:auto;min-height:0;order:initial}
+ .classroom .palette,.classroom .guide{order:initial;overflow:auto;min-height:0}
+}
+@media(max-width:800px){
+ .classroom #classroomRows{max-height:40dvh}
+ .classroom .layout>main{height:58dvh;min-height:300px}
+}
+
+.classroom .clock-section{display:flex;flex-direction:column;justify-content:center;gap:5px;min-width:0;padding:0 18px;border-left:1px solid #c9d5c4}
+.classroom .clock-section:first-child{padding-left:0;border-left:0}
+.classroom .clock-label{font-size:11px;font-weight:600;color:#61705d}
+.classroom .clock-section strong,.classroom-clock output{font-size:20px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}
+.classroom .clock-section small{font-size:10px;color:#677461}
+.classroom .clock-time-controls{display:flex;align-items:center;gap:10px}
+.classroom .clock-time-controls label{flex:1;min-width:70px}
+.classroom .clock-time-controls input{width:100%;padding:0;accent-color:#36744a}
+.classroom .clock-time-controls button{padding:7px 9px;white-space:nowrap}
+.classroom .clock-range-label{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
+.classroom .battery-meter{display:flex;align-items:center;gap:12px}
+.classroom #batteryGauge{flex:1;min-width:50px;width:100%;height:10px;accent-color:#36744a}
+@media(max-width:1100px){.classroom-clock{grid-template-columns:minmax(300px,1.6fr) minmax(150px,1fr) minmax(110px,.7fr) minmax(140px,.85fr);padding:8px}.classroom .clock-section{padding:0 10px}.classroom .clock-time-controls{gap:6px}.classroom .clock-time-controls button{font-size:10px}}
+@media(max-width:800px){.classroom-clock{grid-template-columns:1fr 1fr;gap:10px}.classroom .clock-time{grid-column:1/-1;padding:0 0 8px;border-bottom:1px solid #c9d5c4}.classroom #classroomBattery{border-left:0;padding-left:0}.classroom .clock-section:last-child{grid-column:1/-1;border-left:0;border-top:1px solid #c9d5c4;padding:8px 0 0}}
+.classroom .device-current-state{padding:3px 6px;border:1px solid;border-radius:5px;font-size:.75rem;white-space:nowrap}
+
+.classroom .stage-caption{display:none}
+.classroom .endo-logo-frame{display:flex;align-items:center;justify-content:center;width:76px;height:64px;overflow:hidden;flex-shrink:0}
+.classroom .endo-logo{width:76px;height:64px;object-fit:contain;transform:scale(1.4)}
+.classroom #groups>[data-group]:not([data-group="設備"]):not([data-group="家電"]){display:none!important}
+.classroom #groups{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}
+.classroom #connection{top:22px;bottom:auto;left:22px;right:auto;transform:none;max-width:calc(100% - 44px);padding:8px 12px;border-radius:8px;white-space:normal;text-align:left;line-height:1.6}
+@media(max-width:800px){.classroom #connection{top:12px;left:12px;max-width:calc(100% - 24px)}}
+
+.classroom .layout{gap:10px;padding:10px;background:#e5ebe3}
+.classroom .layout>.palette,.classroom .layout>main,.classroom .layout>.guide{border:1px solid #bccbbb;border-radius:10px;box-shadow:0 1px 3px #293f350b;overflow:hidden}
+.classroom .layout>.palette{padding:14px 12px;overflow:auto;background:#fcfdf9}
+.classroom .layout>main{background:#fff}
+.classroom .layout>.guide{padding:10px;background:#f5f8f2}
+.classroom #groups{padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid #d5dfd1}
+.classroom #classroomStatus,.classroom #operationLog,.classroom .guide>section:has(#microbitConnect){border:1px solid #d0dbcb;border-radius:8px;padding:10px;background:#fff}
+.classroom .guide h2{padding-bottom:7px;margin-bottom:6px;border-bottom:1px solid #e0e7dc}
+@media(max-width:800px){.classroom .layout{padding:8px;gap:8px}.classroom .layout>.palette,.classroom .layout>.guide{width:100%}}
+.classroom #rotationBox{display:none!important}
+.classroom #operationLog{padding:6px 8px;flex-shrink:0}
+.classroom #operationLog h2{font-size:.8rem;padding-bottom:3px;margin-bottom:3px}
+.classroom #operationLog ol{height:38px;font-size:.72rem;padding-top:2px;padding-bottom:2px}
+.classroom #classroomStatus{flex:1 1 0;min-height:0}
+.classroom [aria-label="完成表示の屋根形状"]{display:none!important}
+
+body.classroom .structure-specs{display:none!important}
